@@ -8,22 +8,22 @@ import (
 // CountryCode - 国家代码（254个国家）。有三个代码，例如俄罗斯 == RU == RUS == 643。
 type CountryCode int64
 
-// Country - all info about country
+// Country - 包含国家的所有信息
 type Country struct {
-	Name         string            `json:"name"`
-	Alpha2       string            `json:"cca2"`
-	Alpha3       string            `json:"cca3"`
-	FIPS         string            `json:"fips"`
-	IOC          string            `json:"ioc"`
-	FIFA         string            `json:"fifa"`
-	Emoji        string            `json:"emoji"`
-	Code         CountryCode       `json:"code"`
-	Currency     CurrencyCode      `json:"currency"`
-	Capital      CapitalCode       `json:"capital"`
-	CallCodes    []CallCode        `json:"callingCode"`
-	Domain       DomainCode        `json:"domain"`
-	Region       RegionCode        `json:"region"`
-	Subdivisions []SubdivisionCode `json:"subdivisionCodes"`
+	Name         string            `json:"name"`             // 国家名称
+	Alpha2       string            `json:"cca2"`             // Alpha-2 代码
+	Alpha3       string            `json:"cca3"`             // Alpha-3 代码
+	FIPS         string            `json:"fips"`             // FIPS 代码
+	IOC          string            `json:"ioc"`              // IOC 代码
+	FIFA         string            `json:"fifa"`             // FIFA 代码
+	Emoji        string            `json:"emoji"`            // Emoji 表情
+	Code         CountryCode       `json:"code"`             // 国家代码
+	Currency     CurrencyCode      `json:"currency"`         // 货币代码
+	Capital      CapitalCode       `json:"capital"`          // 首都代码
+	CallCodes    []CallCode        `json:"callingCode"`      // 电话区号
+	Domain       DomainCode        `json:"domain"`           // 域名代码
+	Region       RegionCode        `json:"region"`           // 地区代码
+	Subdivisions []SubdivisionCode `json:"subdivisionCodes"` // 子区域代码
 }
 
 // Typer - typer interface, provide a name of type
